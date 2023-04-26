@@ -55,6 +55,8 @@ html {
     letter-spacing: 3rem;
 }
 
+
+
 @keyframes animateHeading {
     0%{
         transform: translateZ(8rem);
@@ -69,6 +71,17 @@ html {
     25% {
         transform: translateZ(0);
         opacity: 1;
+        letter-spacing: 1.5rem;
+    }
+    28%{
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
+    }
+    100%{
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
     }
 }
 
