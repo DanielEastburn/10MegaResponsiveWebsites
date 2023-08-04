@@ -37,6 +37,7 @@ html {
     margin-bottom: 4rem;
     height: 20rem;
     perspective: 50rem;
+    overflow: hidden;
 }
 
 .banner-heading span {
@@ -53,6 +54,22 @@ html {
     transform: translateZ(8rem);
     opacity: 0;
     letter-spacing: 3rem;
+}
+
+.heading-1 {
+    animation: animateHeading 12s 3s infinite;
+}
+
+.heading-2 {
+    animation: animateHeading 12s 6s infinite;
+}
+
+.heading-3 {
+    animation: animateHeading 12s 9s infinite;
+}
+
+.heading-4 {
+    animation: animateHeading 12s 12s infinite;
 }
 
 
@@ -95,6 +112,8 @@ html {
     margin: 0 auto 4rem auto;
     padding: 1rem 0;
     box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
 }
 
 .banner-btn {
@@ -109,5 +128,9 @@ html {
     box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.5);
     text-shadow: 0.6rem 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
     cursor: pointer;
+}
+
+@keyframes fadeAimation{
+    
 }
 /* End of Section 1 */
