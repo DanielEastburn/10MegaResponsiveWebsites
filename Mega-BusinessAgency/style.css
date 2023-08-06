@@ -20,9 +20,24 @@ html {
     height: 8rem;
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
-    top: 0;
+    top: -8rem;
     z-index: 10;
     padding: 3rem;
+    transition: height 0.5s;
+    animation: animateNavbar 1s 0.5s forwards;
+}
+
+@keyframes animateNavbar {
+    0%{
+        top: -8rem
+    }
+    100%{
+        top: 0;
+    }
+}
+
+.navbar.change{
+    height: 100vh;
 }
 
 .logo {
@@ -47,7 +62,35 @@ html {
 }
 
 .nav-list{
-    display: none;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.change .nav-list{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s 0.5s;
+}
+
+.nav-link{
+    font-family: "MADE Soulmaze", sans-serif;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    color: #fff;
+    margin: 2rem 0;
+    transition: color 0.4s; 
+}
+
+.nav-link:hover{
+    color: #9e0e09;
 }
 /* End of Navbar */
 
@@ -55,12 +98,40 @@ html {
 .menu {
     width: 4rem;
     height: 4rem;
-    background-color: #eee;
     position: fixed;
     top: 2rem;
     right: 4rem;
     z-index: 100;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   
+}
+
+.line{
+    width: 100%;
+    height: 0.2rem;
+    background-color: #eee;
+    transition: transform 0.3s
+}
+
+.line-1 {
+    width: 50%;
+}
+
+.change .line-1{
+    transform: translate(100%, 1rem) rotate(-35deg);
+    transform-origin: right;
+}
+
+.line-3 {
+    width: 50%;
+    margin-left: auto;
+
+}
+
+.change .line-3 {
+    transform: translateY(-1rem) rotate(35deg);
+    transform-origin: right;
 }
 /* End of Menu */
 
